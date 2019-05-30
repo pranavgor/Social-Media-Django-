@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<!doctype html>
+<title>Create</title>
+<div style="text-align:center">
+{% block app %}
+<form  action="" method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="POST">
+</form>
+{% endblock %}
+</div>
+{% endblock content %}
